@@ -107,15 +107,15 @@ public class EmployeeController {
         return employeeService.showEmployee();
     }
 
-    @PutMapping("employee/{id}")
-    public String updateEmployee(@PathVariable String id, @RequestBody Employee employee) {
-        // TODO: process PUT request
-        return employeeService.updateEmployee(id, employee);
-    }
+    // @PutMapping("employee/{id}")
+    // public String updateEmployee(@PathVariable String id, @RequestBody Employee employee) {
+    //     // TODO: process PUT request
+    //     return employeeService.updateEmployee(id, employee);
+    // }
 
-    @DeleteMapping("employee/{id}")
-    public String deleteEmployee(@PathVariable String id) {
-        return employeeService.deleteEmployee(id);
-    }
+    // @DeleteMapping("employee/{id}")
+    // public String deleteEmployee(@PathVariable String id) {
+    //     return employeeService.deleteEmployee(id);
+    // }
 
 }

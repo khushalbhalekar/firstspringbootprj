@@ -1,5 +1,9 @@
 package in.pinnacle.firstspringbootprj.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,12 +40,14 @@ import lombok.NoArgsConstructor;
 //     }    
 // }
 
-
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Employee {
-    private int empId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long empId;
     private String empName;
     private String empPhone;
     private String empEmail;
